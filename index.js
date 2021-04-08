@@ -8,21 +8,55 @@ function showMeTheMoney() {
     .then(res => res.json())
     .then(data => {
       console.log(data)
-      //how to sort data by type?
-      // data.filter("type")?
-      //How to grab id=currency-select?
-      // const cryptoList = document.getElementsByName("crypto")
-      const cryptoList = document.querySelector("value1")
-      // if (cryptoList == "Crypto")
-      console.log(cryptoList)
-      const fiatList = document.getElementsByName("fiat")
-      console.log(fiatList)
 
-      const commoditiesList = document.getElementsByName("commodities")
-      console.log(commoditiesList)
+      //Send JSON data into a callback function
+      // seperate by data type
+      function currency(data) {
+        data.filter()
+        //filter is confusing.  it is not a function so why the parentheses? do I place it in the currency function param?
+
+        // for (const element of data) {
+
+        //Find the container where we attach everything to
+        const currencyUl = document.querySelector('#container');
+
+        //Create all necessary elements
+        const cryptoList = document.createElement('li');
+        const fiatList = document.createElement('li');
+        const commodotiesList = document.createElement('li');
+
+        //Add appropriate classes and ids. Grab data and insert if needed.
+        cryptoList.className = "Crypto"
+        fiatList.classList = "Fiat"
+        commodotiesList.classList = "Commodities"
+        //how to grab data?
+
+        //whatgoeshere?.dataset.id = element.id
+
+
+
+        //Grab data and insert it into created elements
+        //cryptoList.innerHTML? 
+
+        //Append everything to main container
+
+      }
+
 
     })
-  return showMeTheMoney;
+
+  // const cryptoList = document.getElementsByName("crypto")
+  // // if (cryptoList == "Crypto")
+  // console.log(cryptoList)
+
+  // const fiatList = document.getElementsByName("fiat")
+  // console.log(fiatList)
+
+  // const commoditiesList = document.getElementsByName("commodities")
+  // console.log(commoditiesList)
+
+  // })
+  // showMeTheMoney();
 }
 
 
