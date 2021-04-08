@@ -7,41 +7,42 @@ function showMeTheMoney() {
   fetch(BASE_URL)
     .then(res => res.json())
     .then(data => {
-      console.log(data)
+      const currencies = Object.values(data.rates);
+      let chosenCurrency = ""
+      console.log(currencies)
+      currencies.filter(currency => currency.type === chosenCurrency)
+
+      //currencies.filter(currency => currency.type === "crypto")
 
       //Send JSON data into a callback function
       // seperate by data type
-      function currency(data) {
-        data.filter()
-        //filter is confusing.  it is not a function so why the parentheses? do I place it in the currency function param?
+      // data.filter()
+      //filter is confusing.  it is not a function so why the parentheses? do I place it in the currency function param?
 
-        // for (const element of data) {
+      // for (const element of data) {
 
-        //Find the container where we attach everything to
-        const currencyUl = document.querySelector('#container');
+      //Find the container where we attach everything to
+      const currencyUl = document.querySelector('#container');
 
-        //Create all necessary elements
-        const cryptoList = document.createElement('li');
-        const fiatList = document.createElement('li');
-        const commodotiesList = document.createElement('li');
+      //Create all necessary elements
+      const cryptoList = document.createElement('li');
+      const fiatList = document.createElement('li');
+      const commodotiesList = document.createElement('li');
 
-        //Add appropriate classes and ids. Grab data and insert if needed.
-        cryptoList.className = "Crypto"
-        fiatList.classList = "Fiat"
-        commodotiesList.classList = "Commodities"
-        //how to grab data?
+      //Add appropriate classes and ids. Grab data and insert if needed.
+      cryptoList.className = "Crypto"
+      fiatList.classList = "Fiat"
+      commodotiesList.classList = "Commodities"
+      //how to grab data?
 
-        //whatgoeshere?.dataset.id = element.id
-
+      //whatgoeshere?.dataset.id = element.id
 
 
-        //Grab data and insert it into created elements
-        //cryptoList.innerHTML? 
 
-        //Append everything to main container
+      //Grab data and insert it into created elements
+      //cryptoList.innerHTML? 
 
-      }
-
+      //Append everything to main containe
 
     })
 
