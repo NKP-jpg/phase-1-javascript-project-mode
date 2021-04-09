@@ -1,6 +1,5 @@
 const BASE_URL = "https://api.coingecko.com/api/v3/exchange_rates"
 document.addEventListener("DOMContentLoaded", () => {
-  // document.addEventListener("change", showMeTheMoney)
   document.querySelector("#currency-select").addEventListener("change", showMeTheMoney)
 })
 
@@ -27,8 +26,6 @@ function renderCurrencyList(list) {
     listItem.className = "investment-options"
     listItem.setAttribute("data-value", list[i].value)
     currencyList.appendChild(listItem)
-
-
   }
 }
 
@@ -41,7 +38,6 @@ function addListenersToLi() {
     })
   }
 }
-
 //function to show currency value
 function showCurrencyValue() {
 
