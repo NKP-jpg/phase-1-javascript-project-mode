@@ -12,29 +12,21 @@ function showMeTheMoney() {
       const filteredCurrencies = currencies.filter(currency => currency.type === chosenCurrency)
       console.log(filteredCurrencies)
 
-
-
+      //iterate through currency and place in proper container
 
       //Find the container where we attach everything to
-      // const currencyUl = document.querySelector('#container');
+      const currencyUl = document.querySelector('#container');
 
       //Create all necessary elements
-      // const cryptoList = document.createElement('li');
-      // const fiatList = document.createElement('li');
-      // const commodotiesList = document.createElement('li');
+      const cryptoList = document.createElement('li');
+      const fiatList = document.createElement('li');
+      const commodotiesList = document.createElement('li');
 
       //Add appropriate classes and ids. Grab data and insert if needed.
       // cryptoList.className = "Crypto"
       // fiatList.classList = "Fiat"
       // commodotiesList.classList = "Commodities"
-      //how to grab data?
 
-
-
-
-
-      //Grab data and insert it into created elements
-      //cryptoList.innerHTML? 
 
       //Append everything to main container
 
