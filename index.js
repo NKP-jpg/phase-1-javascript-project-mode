@@ -17,7 +17,7 @@ function showMeTheMoney() {
       console.log(filteredCurrencies)
     })
 }
-//create helper function
+//helper function to render currency list
 function renderCurrencyList(list) {
   const currencyList = document.querySelector(".currencyList")
   currencyList.innerHTML = ""
