@@ -13,6 +13,10 @@ function showMeTheMoney() {
       console.log(filteredCurrencies)
 
       //iterate through currency and place in proper container
+      array.forEach(chosenCurrency => {
+
+
+      });
 
       //Find the container where we attach everything to
       const currencyUl = document.querySelector('#container');
