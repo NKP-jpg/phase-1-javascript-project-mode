@@ -13,6 +13,7 @@ function showMeTheMoney() {
       const filteredCurrencies = currencies.filter(currency => currency.type === chosenCurrency)
       renderCurrencyList(filteredCurrencies)
       addListenersToLi()
+      showCurrencyValue()
       console.log(filteredCurrencies)
     })
 }
@@ -38,7 +39,7 @@ function addListenersToLi() {
     })
   }
 }
-//function to show currency value
+//third helper function to show currency value
 function showCurrencyValue() {
 
 
