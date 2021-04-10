@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function showMeTheMoney() {
   let chosenCurrency = event.target.value
-  console.log(chosenCurrency)
+  // console.log(chosenCurrency)
   fetch(BASE_URL)
     .then(res => res.json())
     .then(data => {
