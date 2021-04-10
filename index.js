@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("#currency-select").addEventListener("change", showMeTheMoney)
 })
 
+
 function showMeTheMoney() {
   let chosenCurrency = event.target.value
   console.log(chosenCurrency)

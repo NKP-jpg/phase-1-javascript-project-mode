@@ -1,6 +1,11 @@
+
 /* Dropdown Button */
+
 body{background-color:rgb(96, 175, 138);
-font-family: 'lato', san-serif;}
+font-family: 'lato', san-serif;
+margin: 0 auto;
+width: 50%;
+}
  
 /* .container{margin: 0;
   padding: 0;
@@ -19,7 +24,9 @@ h1{color: #2980B9;
 text-transform: uppercase; 
 letter-spacing: 3px;
 word-spacing: 2px;
-font-weight: 400;}
+font-weight: 400;
+text-align: center;
+}
 /* Dropdown button on hover & focus */
 .dropbtn:hover, .dropbtn:focus {
   background-color: #2980B9;
