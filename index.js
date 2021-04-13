@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function showMeTheMoney() {
   let chosenCurrency = event.target.value
-  // console.log(chosenCurrency)
+  console.log(chosenCurrency)
   fetch(BASE_URL)
     .then(res => res.json())
     .then(data => {
@@ -14,13 +14,12 @@ function showMeTheMoney() {
       const filteredCurrencies = currencies.filter(currency => currency.type === chosenCurrency)
       renderCurrencyList(filteredCurrencies)
       addListenersToLi()
-      showCurrencyValue()
       console.log(filteredCurrencies)
     })
 }
 //helper function to render currency list
 function renderCurrencyList(list) {
-  const currencyList = document.querySelector(".currencyList")
+  let currencyList = document.querySelector(".currencyList")
   currencyList.innerHTML = ""
   for (let i = 0; i < list.length; i++) {
     const listItem = document.createElement('li');
@@ -40,11 +39,14 @@ function addListenersToLi() {
     })
   }
 }
-//third helper function to show currency value
+//third helper function to display currency value
 function showCurrencyValue() {
+  let currencyList = document.querySelector(".currencyList")
+  currencyList.innerHTML = ""
 
 
 }
+
 
 
 
