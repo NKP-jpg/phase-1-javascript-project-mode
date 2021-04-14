@@ -1,4 +1,3 @@
-const BASE_URL = "https://api.coingecko.com/api/v3/exchange_rates"
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("#currency-select").addEventListener("change", showMeTheMoney)
 })
@@ -7,13 +6,14 @@ document.addEventListener("DOMContentLoaded", () => {
 function showMeTheMoney() {
   let chosenCurrency = event.target.value
   console.log(chosenCurrency)
-  fetch(BASE_URL)
+  fetch("https://api.coingecko.com/api/v3/exchange_rates")
     .then(res => res.json())
     .then(data => {
       const currencies = Object.values(data.rates);
       const filteredCurrencies = currencies.filter(currency => currency.type === chosenCurrency)
       renderCurrencyList(filteredCurrencies)
       addListenersToLi()
+      showCurrencyValue()
       console.log(filteredCurrencies)
     })
 }
@@ -36,15 +36,19 @@ function addListenersToLi() {
   for (let i = 0; i < listItems.length; i++) {
     listItems[i].addEventListener("click", function (event) {
       alert("value: " + event.target.dataset.value)
+
     })
   }
 }
 //third helper function to display currency value
-function showCurrencyValue() {
+function showCurrencyValue(value) {
   let currencyList = document.querySelector(".currencyList")
   currencyList.innerHTML = ""
-
-
+  let currencyValue = document.createElement('li')
+  currencyValue.innerText = value.event.target.dataset.value
+  currencyValue.className = "value"
+  currencyValue.setAttribute("value", event.target.dataset.value)
+  currencyValue.appendChild(currencyValue)
 }
 
 
