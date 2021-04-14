@@ -13,7 +13,7 @@ function showMeTheMoney() {
       const filteredCurrencies = currencies.filter(currency => currency.type === chosenCurrency)
       renderCurrencyList(filteredCurrencies)
       addListenersToLi()
-      showCurrencyValue()
+      // showCurrencyValue()
       console.log(filteredCurrencies)
     })
 }
@@ -34,21 +34,19 @@ function renderCurrencyList(list) {
 function addListenersToLi() {
   const listItems = document.querySelectorAll(".investment-options")
   for (let i = 0; i < listItems.length; i++) {
-    listItems[i].addEventListener("click", function (event) {
-      alert("value: " + event.target.dataset.value)
-
-    })
+    listItems[i].addEventListener("click", showCurrencyValue)
   }
 }
+
 //third helper function to display currency value
-function showCurrencyValue(value) {
+function showCurrencyValue() {
   let currencyList = document.querySelector(".currencyList")
   currencyList.innerHTML = ""
   let currencyValue = document.createElement('li')
-  currencyValue.innerText = value.event.target.dataset.value
-  currencyValue.className = "value"
-  currencyValue.setAttribute("value", event.target.dataset.value)
-  currencyValue.appendChild(currencyValue)
+  currencyValue.innerText = event.target.innerText + "-  Value: " + event.target.dataset.value
+  // currencyValue.className = "value"
+  // currencyValue.setAttribute("value", event.target.dataset.value)
+  currencyList.appendChild(currencyValue)
 }
 
 
